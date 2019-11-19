@@ -3,7 +3,7 @@ body{
     padding:0;
     text-align:center;
 }
-h2{
+h2,h3{
     font-family: "Agency FB";
     color: red;
 }
@@ -35,7 +35,7 @@ h2{
 .table{
     width: 20%;
     margin: 10px auto;
-    padding: 3%;
+
 }
 .tableData{
     width: 80%;

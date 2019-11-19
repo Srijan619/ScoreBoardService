@@ -43,9 +43,10 @@
         &nbsp;
         <input type="number" id="score" placeholder="Score">
         &nbsp;
-        <button id="addScore" class="addScore" onclick="addScore()">Add</button>
+        <button id="addScore" class="addScore" onclick="addScore(),notification()">Add</button>
         <button class="addScore"  onclick="sortTable()"><img src="img/sortIcon.png"></button>
     </div>
+    <h3 id="message"></h3>
     <div class="table">
         <table class="tableData" id="scoreTable">
             <tr id="tableRow">

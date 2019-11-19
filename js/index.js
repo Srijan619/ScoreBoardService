@@ -1,4 +1,6 @@
 var score_array=[];
+var message;
+var message_details;
 
 
 function addScore() {
@@ -34,11 +36,11 @@ function loadScore() {
             var initials=scores[k].initials;
             var score=scores[k].score;
             score_array.push([initials,score]);
-            console.log(initials,score)
+
         }
 
     }, function (errorObject) {
-        console.log("The read failed: " + errorObject.code);
+        message_details=errorObject.code;
     });
 
    window.setTimeout(createTable, 1000);
@@ -56,9 +58,15 @@ function createTable() {
         }
         tableBody.appendChild(tr);
     }
+    message_details="Score successfully added";
 
 }
+function notification()
+{
+    message=document.getElementById("message").innerHTML=message_details;
 
+    setTimeout(function(){  message=document.getElementById("message").innerHTML=""; }, 1500);
+}
 function refreshData() {
 
     for(var i =tableBody.rows.length - 1; i > 0; i--)
