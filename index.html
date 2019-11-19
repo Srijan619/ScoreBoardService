@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <script src="js/index.js"></script>
+    <script src="js/sortTable.js"></script>
+    <title>ScoreBoardService</title>
+</head>
+<body onload="loadScore()">
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.4.0/firebase.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-analytics.js"></script>
+
+<script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyDVQQy9N_B9gFaIjT0JgQCTtLvxfo5TnLg",
+        authDomain: "scoreboard-50860.firebaseapp.com",
+        databaseURL: "https://scoreboard-50860.firebaseio.com",
+        projectId: "scoreboard-50860",
+        storageBucket: "scoreboard-50860.appspot.com",
+        messagingSenderId: "1042968524439",
+        appId: "1:1042968524439:web:4e865c038904a0bc431bd2",
+        measurementId: "G-DWP8HT7RSG"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+
+</script>
+
+
+
+<div class="scoreboard">
+    <h2>Scoreboard</h2>
+    <div class="scoreCollection">
+        <input type="text" id="name" placeholder="Input player name">
+        &nbsp;
+        <input type="number" id="score" placeholder="Score">
+        &nbsp;
+        <button id="addScore" class="addScore" onclick="addScore()">Add</button>
+        <button class="addScore"  onclick="sortTable()"><img src="img/sortIcon.png"></button>
+    </div>
+    <div class="table">
+        <table class="tableData" id="scoreTable">
+            <tr id="tableRow">
+                <th>Player Name</th>
+
+                <th>Score </th>
+
+            </tr>
+
+        </table>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+body{
+    margin:0 auto;
+    padding:0;
+    text-align:center;
+}
+h2{
+    font-family: "Agency FB";
+    color: red;
+}
+
+.scoreboard{
+    display: flex;
+    flex-direction: column;
+}
+
+.scoreCollection{
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+#score{
+    width: 30%;
+}
+.addScore{
+    font-weight: bold;
+    border-radius: 10px;
+    background-color: transparent;
+}
+.addScore:hover{
+    background-color: yellow;
+}
+
+.table{
+    width: 20%;
+    margin: 10px auto;
+    padding: 3%;
+}
+.tableData{
+    width: 80%;
+    align-items: center;
+
+}
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+th{
+    background-color: darkolivegreen;
+    color:white;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+#sort{
+    width: 5%;
+}
+
+input{
+    text-align: center;
+}
